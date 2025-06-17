@@ -22,20 +22,20 @@
     "code": "https://github.com/"
   },
   {
-    "title": "Dashboard",
-    "type": "ml",
-    "description": "ML model predicting customer churn with 87% F1-score.",
-    "process": "1. Preprocessing, 2. Model training, 3. Deployment pipeline",
-    "stack": ["Python", "Scikit-learn", "Pandas"],
+    "title": "Coffee Sales Dashboard",
+    "type": "Data Analytics",
+    "description": "Data analysis of a coffee sales dataset considering factors such as sales, order type, and order date.",
+    "process": "The coffee sales dataset was given in a star schema via an Excel file with multiple sheets. I denormalized the dataset first using XLOOKUP and INDEX-MATCH functions and cleaned and transformed the data using IFs and other advanced functions. Afterward, I developed an Excel-based dashboard to visualize the trends and integrated slicers and filters to support user exploration.",
+    "stack": ["MS Excel"],
     "img1": "others/images/projects/p1/1.jpg",
     "img2": "others/images/projects/p1/2.jpg",
     "img3": "others/images/projects/p1/3.png",
     "code": "https://github.com/"
   },
   {
-    "title": "Dashboard",
-    "type": "ml",
-    "description": "ML model predicting customer churn with 87% F1-score.",
+    "title": "Visualizing Netflix: Trends and Ratings",
+    "type": "Data Architecture",
+    "description": "An end-to-end data analytics project involving the normalization and visualization of a Netflix dataset.",
     "process": "1. Preprocessing, 2. Model training, 3. Deployment pipeline",
     "stack": ["Python", "Scikit-learn", "Pandas"],
     "img1": "others/images/projects/p1/1.jpg",
