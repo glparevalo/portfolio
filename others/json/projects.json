@@ -11,11 +11,11 @@
     "code": "https://github.com/"
   },
   {
-    "title": "Dashboard",
-    "type": "ml",
-    "description": "ML model predicting customer churn with 87% F1-score.",
-    "process": "1. Preprocessing, 2. Model training, 3. Deployment pipeline",
-    "stack": ["Python", "Scikit-learn", "Pandas"],
+    "title": "COVID-19 Insights: Muntinlupa City 2020",
+    "type": "Data Analytics",
+    "description": "Data analysis of COVID-19 dataset focused in Muntinlupa City on 2020.",
+    "process": "In this project, I extracted, cleaned, and analyzed over 1M rows of COVID-19 data using Microsoft Excel. I extracted the required data using MySQL and transformed the raw, extracted data using MS Excel. After cleaning, I developed an interactive Tableau dashboard to present key metrics such as recovery rate and incorporated cards, graphs, filters, and charts to visualize trends and patterns.",
+    "stack": ["MS Excel", "Tableau", "MySQL"],
     "img1": "others/images/projects/p1/1.jpg",
     "img2": "others/images/projects/p1/2.jpg",
     "img3": "others/images/projects/p1/3.png",
