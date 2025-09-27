@@ -348,6 +348,11 @@ body::before {
   transform: translateY(0);
 }
 
+.section h2{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 
 /* =========================
    ABOUT SECTION
