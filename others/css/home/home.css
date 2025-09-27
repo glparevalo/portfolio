@@ -5,7 +5,13 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden; /* ensures overlays don't overflow */
+  overflow: hidden;
+}
+
+/* By default, have no space */
+body, h1, h2, h3, p, a, ul, li {
+  margin: 0;
+  padding: 0;
 }
 
 /* Background image with opacity */
@@ -21,7 +27,7 @@ body::before {
   z-index: -2;
 }
 
-/* White gradient overlay at the bottom */
+/* Make background image darker by overlay */
 body::after {
   content: "";
   position: absolute;
@@ -30,5 +36,10 @@ body::after {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.06);
-  z-index: -1; /* above image but below content */
+  z-index: -1;
+}
+
+/* Box 1 */
+.intro {
+    width: 67%;
 }
