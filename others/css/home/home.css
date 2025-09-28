@@ -1,45 +1,139 @@
 body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+overflow: hidden;
 }
 
 /* By default, have no space */
-body, h1, h2, h3, p, a, ul, li {
-  margin: 0;
-  padding: 0;
+* {
+margin: 0;
+padding: 0;
 }
 
 /* Background image with opacity */
 body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('../../images/bg.png') center/cover no-repeat;
-  opacity: 0.5;
-  z-index: -2;
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+background: url('../../images/bg.png') center/cover no-repeat;
+opacity: 0.5;
+z-index: -2;
 }
 
 /* Make background image darker by overlay */
 body::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.06);
-  z-index: -1;
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.06);
+z-index: -1;
 }
+
+/* Text and contents styles */
+p, h1, li, a{
+font-family: Inter;
+text-decoration: none;
+}
+
+p, li {
+font-size: 0.9em;
+}
+
+h1{
+margin-bottom: 0.6em;
+font-size: 1.2em;
+}
+
+p{
+margin-bottom: 1.2em;
+}
+
+ul{
+margin-bottom: 1.2em;
+margin-left: 1.2em;
+}
+
+
 
 /* Box 1 */
 .intro {
-    width: 67%;
+width: 67%;
+height: 100%;
+}
+
+.welcome{
+font-size: 10px;
+}
+
+#manilaTime {
+font-family: Google Sans Code;
+font-size: 1.6em;
+font-weight: 400;
+}
+
+.message{
+  height: 70%;
+}
+
+.links{
+  display: flex;
+  align-items: end;
+  height: 30%;
+  gap: 1.2em;
+}
+
+.links i, .links a{
+  color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.links-icons {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  gap: 1.2em;
+}
+
+.links-icons a{
+  width: 100%;
+  justify-content: center;
+  background-color: blue;
+  height: 50px;
+}
+
+.resume{
+  width: 300px;
+}
+
+.resume a {
+  height: 50px;
+  width: 100%;
+  justify-content: center;
+}
+
+.links a{
+  background-color: blue;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+
+/* icons */
+.contact-icon-wrapper{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  height: calc(100% - 2.4em);
+}
+
+.fas, .fab{
+  font-size: 1.5em;
 }
