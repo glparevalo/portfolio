@@ -3,289 +3,201 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Gabriel Arevalo | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="others/css/index.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriel Arevalo</title>
 
+    <!-- Icons -->
+    <link 
+        rel="stylesheet" 
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_outward" 
+    />
+
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+        integrity="sha512-..." 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" 
+    />
+
+    <!-- Font: Inter and Google Sans Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="others/css/home/home_grid.css" />
+    <link rel="stylesheet" href="others/css/home/home.css" />
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
-            <!-- Logo -->
-            <div class="logo"><h1 class="logo-h1">Gabriel Arevalo</h1></div>
 
-            <!-- Navigation Bar -->
-            <div class="nav-right">
-                <ul class="nav-links" role="menubar" aria-label="Primary menu" id="main-menu">
-                    <li role="none"><a role="menuitem" href="#home">Home</a></li>
-                    <li role="none"><a role="menuitem" href="#about">About</a></li>
-                    <li role="none"><a role="menuitem" href="#stack">Stack</a></li>
-                    <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
-                </ul>
-                <button class="burger" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation menu">☰</button>
-                <button id="theme-toggle" class="toggle-theme" aria-label="Toggle dark mode">🌙</button>
-            </div>
-        </nav>
-    </header>
+    <div class="container">
+        
+        <!-- Introduction -->
+        <div class="box box-1">
 
-    <!-- Particle Background Container -->
-    <section class="hero" id="home">
-        <div class="container hero-content">
-            <canvas id="stars-canvas"></canvas>
+            <div class="intro">
+                <div class="message">
+                    <div class="intro-welcome">kumusta</div>
+                    <p>I am Gabriel Arevalo, a Data Analyst who specializes in streamlining workflows, generating insights, and building data-driven solutions. As a constant learner, I am actively looking to grow my skills to solve more problems and make a real impact</p>
+                    
+                    <p>Let's connect - I'd love to hear about your work, share ideas, and discover opportunities!</p>
+                </div>
 
-            <!-- Headline -->
-            <div class="hero-text">
-                <h1>Hi, I'm Gabriel</h1>
-                <p>Engineer + Data Analyst + Software Developer</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="cta">🚀 Explore My Work</a>
-                    <a href="" class="cta secondary">📄 Download Resume</a>
-                    <!-- <a href="others/GabrielArevalo_Resume.pdf" download class="cta secondary">📄 Download Resume</a> -->
+                <div class="links">
+                    <div class="links-icons">
+                        <a href="mailto:gabriellyanearevalo@gmail.com" target="_blank" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/glparevalo/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <a href="https://github.com/glparevalo" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="resume">
+                        <a href="" >
+                            Download Resume
+                        </a>
+                    </div>
+
                 </div>
             </div>
 
-            <!-- JSON animation -->
-            <div class="hero-animation">
-                <dotlottie-player
-                src="https://lottie.host/9851db3d-e296-4769-83f4-311b803e2a2f/Yyw15jHfQL.lottie"
-                background="transparent"
-                speed="1"
-                style="width: 300px; height: 300px"
-                loop
-                autoplay>
-                </dotlottie-player>
+            <div class="image"></div>
+        </div>
+
+        <!-- Stack -->
+        <div class="box box-2">
+            <div class="box-title-heading">
+                <h1>What I Do Best</h1>
+                <a href=""><span class="material-symbols-outlined">arrow_outward</span></a>
+            </div>
+            <ul>
+                <li>Data Analytics and BI</li>
+                <li>Data Engineering & Modeling</li>
+                <li>Web Development</li>
+                <li>Automation</li>
+                <li>Problem Solving</li>
+            </ul>
+
+            <div class="box-internal-heading">Learning Focus</div>
+            <ul>
+                <li>Microsoft Architecture</li>
+                <li>Data Science</li>
+                <li>AI & ML</li>
+                <li>Chess and Sudoku</li>
+            </ul>
+        </div>
+
+        <!-- Clock -->
+        <div class="box box-3" id="manilaWeather"></div>
+
+
+        <!-- Facts -->
+        <div class="box box-4">
+            
+            <h1>Top 3 Facts About Me<h1>
+        </div>
+
+        <!-- Colors -->
+        <div class="box box-5">
+            Colors
+        </div>
+
+        <!-- Projects -->
+        <div class="box box-6">
+            <div class="box-title-heading">
+                <h1>Works & Projects</h1>
+                <a href=""><span class="material-symbols-outlined">arrow_outward</span></a>
             </div>
         </div>
-    </section>
 
 
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <div class="about-grid">
-            
-            <!-- Portrait -->
-            <div class="about-image">
-                <img src="others/images/portrait.png" alt="Portrait of Gabriel Arevalo" />
-                <br><br>
-                <center><p><strong>Engr.</strong> Gabriel Lyane Arevalo</p></center>
-                <center><p><strong style="color: var(--accent);">Engineer</strong> | <strong style="color: var(--accent);">Data Analyst</strong></p></center>
-
-                <div class="social-icons">
-                    <!-- GitHub -->
-                    <a href="https://github.com/glparevalo" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
+        <div class="box box-8">
+            <h1>Contact Me</h1>
+                <div class="contact-icon-wrapper">
+                    <a href="mailto:gabriellyanearevalo@gmail.com" target="_blank" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
                     </a>
 
-                    <!-- LinkedIn -->
                     <a href="https://www.linkedin.com/in/glparevalo/" target="_blank" aria-label="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                     </a>
 
-                    <!-- Email -->
-                    <a href="mailto:gabriellyanearevalo@gmail.com" target="_blank" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
+                    <a href="https://github.com/glparevalo" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
                     </a>
                 </div>
+        </div>
+
+
+        <!-- About -->
+        <div class="box box-10">
+            <div class="box-title-heading">
+                <h1>About Me</h1>
+                <a href=""><span class="material-symbols-outlined">arrow_outward</span></a>
             </div>
+            
+            <div class="about-details"> 
+                <p>I'm Gab! I am an engineer from the Philippines. My work blends Data Engineering, Data Analytics, 
+                    and a little bit of Web Development.
+                </p>
 
-            <!-- About Content -->
-            <div class="about-content">
-                <h3 style="margin-bottom: 1.5rem;">Summary</h3>
-                    <p>
-                        Hi! I'm <strong>Gabriel</strong>, a data analyst who loves making sense of the noise.
-                        I help teams transform plain, boring data into powerful tools. I also uncover useful insights, creatively solve problems, and 
-                        drive impactful, data-backed decisions.
-                    </p>
-
-                    <br>
-                    <p>
-                        My work blends <strong>data analytics</strong> and <strong>software and web development</strong>
-                        into creative, useful solutions. Whether it's automating reports, building pipelines, or designing front-end tools,
-                        I'm obsessed with making data work for people.
-                    </p>
-
-                    <h4>Core Values</h4>
-                    <ul>
-                        <li><strong>Clarity</strong> - Clean design, clear logic, concise storytelling</li>
-                        <li><strong>Efficiency</strong> - Pipelines over manual steps, code that scales</li>
-                        <li><strong>Curiosity</strong> - Always learning, always asking why</li>
-                    </ul>
-
-                <!-- Experience -->
-                <h3>Experience</h3>
-                <div class="experience-entry">
-                    <h4>Data Analyst — RBox International Solutions</h4>
-                    <p><em>March 2025 — Present</em></p>
-                    <ul>
-                        <li>Developed an internal Flask web application with a modern frontend and Python backend to streamline data processing.</li>
-                        <li>Created Excel and Power BI dashboards that simplify data extraction, analysis, and review for cross-functional teams.</li>
-                        <li>Developed a data pipeline using Microsoft Fabric components to enhance data quality and efficiency.</li>
-                        <li>Automated ETL and reporting workflows with Python, reducing manual processing time and improving data accuracy.</li>
-                        <li>Collaborated with key stakeholders to design data-driven strategies that determine business decisions.</li>
-                    </ul>
-                </div>
-
-                <div class="experience-entry">
-                    <h4>Electronics Engineer Intern — Erovoutika</h4>
-                    <p><em>July 2023 — Aug 2023</em></p>
-                    <ul>
-                        <li>Developed microcontroller-based devices for company demonstrations</li>
-                        <li>Led a group of 2 in developing and analyzing a robot, winning the company contest</li>
-                        <li>Composed technical, comprehensive documentations for electronic devices</li>
-                        <li>Created learning materials and trained clients, receiving positive client feedback</li>
-                    </ul>
-                </div>
-
-                <!-- Education -->
-                <h3>Education</h3>
-                <div class="education-entry">
-                    <h4>BS in Electronics Engineering — University of the City of Manila (PLM)</h4>
-                    <p><em>2020 — 2024</em></p>
-                    <ul>
-                        <li>Graduated as <strong style="color: var(--accent)">Cum Laude</strong></li>
-                        <li><strong>Capstone:</strong> Unmanned Amphibious Robot in Aiding Post-Typhoon Response</li>
-                        <li><strong>Relevant coursework:</strong> Engineering Data Analysis, Computer Programming 1 and 2</li>
-                    </ul>
-                </div>
-
-                <!-- <div class="education-entry">
-                    <h4>Certifications</h4>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div> -->
-
+                <div class="box-internal-heading">Main tools and stack I work with</div>
+                <ul>
+                    <li>Python (Data Analytics)</li>
+                    <li>SQL (ETL and Data Modelling)</li>
+                    <li>Excel (Data Processing)</li>
+                    <li>PowerBI & DataFlows</li>
+                    <li>Flask and SQLite</li>
+                </ul>
                 <p>
-                    Outside of work, I do side personal projects, spend time with my family, ride my bike, and explore other 
+                    Outside of work, I do personal side projects, walk outdoors, ride my bike, and explore other 
                     technologies to address my curiosity and add to my skillset.
                 </p>
-                <br><hr><br>
-                <!-- <a href="" download class="cta"  style="margin-top: 1rem;">
-                    📄 Download Resume
-                </a> -->
-                
-                <a href="" class="cta" style="margin-top: 1rem;">📄 Download Resume</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- Tech Stack -->
-    <section id="stack" class="section">
-
-        <h2>Tech Stack</h2>
-
-        <!-- Cards Wrapper -->
-        <div class="skills-grid">
-            <div class="skills-category">
-                <h3>Data Analytics & Visualization</h3>
-                <ul>
-                <li>Python (Pandas, NumPy, scikit-learn, Matplotlib/Seaborn)</li>
-                <li>Business Intelligence: Power BI, Tableau, Microsoft Fabric (Dataflows, Fabric Excel)</li>
-                <li>SQL (MySQL, PostgreSQL, SQL Server)</li>
-                </ul>
-            </div>
-
-            <div class="skills-category">
-                <h3>Data Engineering and Architecture</h3>
-                <ul>
-                <li>ETL & Data Pipelines</li>
-                <li>Data Modeling & Warehousing (Medallion Architecture)</li>
-                </ul>
-            </div>
-
-            <div class="skills-category">
-                <h3>Web & App Development</h3>
-                <ul>
-                <li>HTML5, CSS3, JavaScript</li>
-                <li>Python Frameworks: Flask, Streamlit</li>
-                <li>Power Platform: Power Apps</li>
-                </ul>
-            </div>
-
-            <div class="skills-category">
-                <h3>Tools & Collaboration</h3>
-                <ul>
-                <li>Git/GitHub, APIs/JSON</li>
-                <li>VS Code, Jupyter Notebook, Notion</li>
-                </ul>
             </div>
         </div>
 
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="section">
-
-        <h2>Projects</h2>
-
-        <div class="filter-bar">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="Data Architecture">Data Architecture</button>
-            <button class="filter-btn" data-filter="Data Analytics">Data Analytics</button>
-            <button class="filter-btn" data-filter="Web Development">Web Dev</button>
+        <!-- Download Resume -->
+        <div class="box box-11">
+            <a href="">Download Resume</a>
         </div>
 
-        <div class="project-grid"></div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="cta-footer">
-        <p class="copyright">
-            &copy; 2025 Gabriel Arevalo — All rights reserved
-        </p>
-        
-        <p class="footer-cta">Want to collaborate or reach out?</p>
-
-        <div class="footer-icons">
-            <a href="mailto:gabriellyanearevalo@gmail.com" target="_blank" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/glparevalo/" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/glparevalo" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-            </a>
+        <!-- Footer -->
+        <div class="box box-12">
+            <p>&copy; 2025 Gabriel Arevalo</p>
         </div>
-        </footer>
 
-    <!-- Scripts -->
-    <script src="others/js/index.js"></script>
-    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 
-    <!-- Project Modal -->
-    <div id="project-modal" class="modal" aria-hidden="true">
-        <div class="modal-content">
-            <button class="close-modal" aria-label="Close project details">&times;</button>
-            <div class="modal-body">
-                <div class="modal-images">
-                    <img class="modal-main-img" src="" alt="Project image" />
-                    <div class="modal-thumbnails">
-                        <img src="" class="thumb" />
-                        <img src="" class="thumb" />
-                        <img src="" class="thumb" />
-                    </div>
-                </div>
-
-                <div class="modal-details">
-                    <h3 class="modal-title"></h3>
-                    <p class="modal-description"></p>
-                    <h4>Process</h4>
-                    <p class="modal-process"></p>
-                    <h4>Tech Stack</h4>
-                    <ul class="modal-stack"></ul>
-                    <div class="modal-links">
-                        <a href="#" target="_blank" class="code-link">Source Code</a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+
+    <!-- JavaScripts -->
+    <div id="manilaWeather"></div>
+    <script>
+    function updateWeather() {
+    fetch('/api/weather')
+        .then(res => res.json())
+        .then(data => {
+        const temp = Math.round(data.current.temp_c);
+        const cond = data.current.condition.text;
+        document.getElementById('manilaWeather').textContent =
+            `${temp}°C • ${cond}`;
+        })
+        .catch(() => {
+        document.getElementById('manilaWeather').textContent = 'Weather unavailable';
+        });
+    }
+    updateWeather();
+    setInterval(updateWeather, 30 * 60 * 1000);
+    </script>
+
 
 </body>
 </html>
