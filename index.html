@@ -28,6 +28,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="others/css/home/home_grid.css" />
     <link rel="stylesheet" href="others/css/home/home.css" />
+    <link rel="stylesheet" href="others/css/home/home_responsive.css" />
+
 </head>
 
 <body>
@@ -38,11 +40,11 @@
         <div class="box box-1">
 
             <div class="intro">
-                <div class="message">
+                <div class="intro-message">
                     <div class="intro-welcome">kumusta</div>
-                    <p>I am Gabriel Arevalo, a Data Analyst who specializes in streamlining workflows, generating insights, and building data-driven solutions. As a constant learner, I am actively looking to grow my skills to solve more problems and make a real impact</p>
+                    <p>My name is Gabriel Arevalo, and I am a Data Analyst focused on streamlining workflows, generating insights, and building data-driven solutions. I am actively looking to grow my skills to solve more problems and make a real impact</p>
                     
-                    <p>Let's connect - I'd love to hear about your work, share ideas, and discover opportunities!</p>
+                    <p>Reach out! I'd love to hear about your work and share ideas.</p>
                 </div>
 
                 <div class="links">
@@ -62,7 +64,7 @@
                     
                     <div class="resume">
                         <a href="" >
-                            Download Resume
+                            <div class="intro-resume">Download Resume</div>
                         </a>
                     </div>
 
@@ -74,53 +76,65 @@
 
         <!-- Stack -->
         <div class="box box-2">
-            <div class="box-title-heading">
-                <h1>What I Do Best</h1>
-                <a href=""><span class="material-symbols-outlined">arrow_outward</span></a>
-            </div>
+            <a href="/pages/stack.html">
+                <div class="box-title-heading">
+                    <h1>What I Do Best</h1>
+                    <span class="material-symbols-outlined">arrow_outward</span>
+                </div>
+            </a>
+
             <ul>
-                <li>Data Analytics and BI</li>
-                <li>Data Engineering & Modeling</li>
+                <li>Data Analytics & BI</li>
+                <li>Data Engineering</li>
                 <li>Web Development</li>
                 <li>Automation</li>
                 <li>Problem Solving</li>
             </ul>
 
-            <div class="box-internal-heading">Learning Focus</div>
+            <div class="list-heading">Learning Focus</div>
             <ul>
                 <li>Microsoft Architecture</li>
-                <li>Data Science</li>
-                <li>AI & ML</li>
+                <li>Data Science & ML</li>
                 <li>Chess and Sudoku</li>
             </ul>
         </div>
 
-        <!-- Clock -->
-        <div class="box box-3" id="manilaWeather"></div>
 
+        <!-- Weather -->
+        <div class="box box-3" id="manilaWeather"></div>
 
         <!-- Facts -->
         <div class="box box-4">
-            
-            <h1>Top 3 Facts About Me<h1>
+            <h1>Fun Facts About Me</h1>
+            <ol>
+                <li>I am an Electronics Engineer.</li>
+                <li>I have a great sense of humor.</li>
+                <li>I love learning new things. </li>
+            </ol>
         </div>
 
-        <!-- Colors -->
-        <div class="box box-5">
-            Colors
+        <!-- Theme Colors -->
+        <div class="box box-5 theme-buttons">
+            <button class="theme-circle" style="background:#111111" data-color="#111111"></button>
+            <button class="theme-circle" style="background:#0d78f3" data-color="#0d78f3"></button>
+            <button class="theme-circle" style="background:#22c55e" data-color="#22c55e"></button>
+            <button class="theme-circle" style="background:#ec4899" data-color="#ec4899"></button>
+            <button class="theme-circle" style="background:#f97316" data-color="#f97316"></button>
         </div>
 
         <!-- Projects -->
         <div class="box box-6">
+            <a href="/pages/projects.html">
             <div class="box-title-heading">
-                <h1>Works & Projects</h1>
-                <a href=""><span class="material-symbols-outlined">arrow_outward</span></a>
+                
+                    <h1>Works & Projects</h1>
+                    <span class="material-symbols-outlined">arrow_outward</span>
+                
             </div>
+            </a>
         </div>
 
-
         <div class="box box-8">
-            <h1>Contact Me</h1>
                 <div class="contact-icon-wrapper">
                     <a href="mailto:gabriellyanearevalo@gmail.com" target="_blank" aria-label="Email">
                     <i class="fas fa-envelope"></i>
@@ -136,20 +150,23 @@
                 </div>
         </div>
 
-
         <!-- About -->
         <div class="box box-10">
+            <a href="pages/about.html">
             <div class="box-title-heading">
+                
                 <h1>About Me</h1>
-                <a href=""><span class="material-symbols-outlined">arrow_outward</span></a>
+                <span class="material-symbols-outlined">arrow_outward</span>
+                
             </div>
-            
+            </a>
+
             <div class="about-details"> 
                 <p>I'm Gab! I am an engineer from the Philippines. My work blends Data Engineering, Data Analytics, 
                     and a little bit of Web Development.
                 </p>
 
-                <div class="box-internal-heading">Main tools and stack I work with</div>
+                <div class="list-heading">Main tools and stack I work with</div>
                 <ul>
                     <li>Python (Data Analytics)</li>
                     <li>SQL (ETL and Data Modelling)</li>
@@ -167,35 +184,67 @@
 
         <!-- Download Resume -->
         <div class="box box-11">
-            <a href="">Download Resume</a>
+            <a href="">
+                <div class="box-11-resume">Download Resume</div>
+            </a>
         </div>
 
         <!-- Footer -->
         <div class="box box-12">
-            <p>&copy; 2025 Gabriel Arevalo</p>
+            <div class="footer">
+                Manila, PH | <span class="email">gabriellyanearevalo@gmail.com</span> | glparevalo © 2025
+            </div>
         </div>
-
 
     </div>
 
-    <!-- JavaScripts -->
-    <div id="manilaWeather"></div>
+    <!-- JavaScript -->
     <script>
-    function updateWeather() {
-    fetch('/api/weather')
-        .then(res => res.json())
-        .then(data => {
-        const temp = Math.round(data.current.temp_c);
-        const cond = data.current.condition.text;
-        document.getElementById('manilaWeather').textContent =
-            `${temp}°C • ${cond}`;
-        })
-        .catch(() => {
-        document.getElementById('manilaWeather').textContent = 'Weather unavailable';
+        // Weather
+        function updateWeather() {
+        fetch('/api/weather')
+            .then(res => res.json())
+            .then(data => {
+            const temp = Math.round(data.current.temp_c);
+            const cond = data.current.condition.text;
+            document.getElementById('manilaWeather').textContent =
+                `MNL | ${temp}°C`;
+            })
+            .catch(() => {
+            document.getElementById('manilaWeather').textContent = 'Weather unavailable';
+            });
+        }
+        updateWeather();
+        setInterval(updateWeather, 30 * 60 * 1000);
+
+        // Font color change
+        document.querySelectorAll('.theme-circle').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const color = btn.dataset.color;
+            document.documentElement.style.setProperty('--font-color', color);
+
+            function getBrightness(hex) {
+            // remove leading #
+            const c = hex.replace('#','');
+            const r = parseInt(c.substr(0,2),16);
+            const g = parseInt(c.substr(2,2),16);
+            const b = parseInt(c.substr(4,2),16);
+            return (0.299*r + 0.587*g + 0.114*b);
+        }
+
+
+
+            const brightness = getBrightness(color);
+            // If bright, make overlay darker; if dark, make overlay lighter
+            const overlay = brightness > 90
+            ? 'rgba(0,0,0,0.15)'  // darker overlay for light colors
+            : 'rgba(255,255,255,0.1)'; // light overlay for dark colors
+
+            document.documentElement.style.setProperty('--hover-overlay', overlay);
         });
-    }
-    updateWeather();
-    setInterval(updateWeather, 30 * 60 * 1000);
+        });
+
+
     </script>
 
 
