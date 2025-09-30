@@ -192,7 +192,7 @@ body {
   right: 0;            /* push to the right */
   bottom: 0;           /* stretch full height */
   width: 200px;        /* control how wide it is */
-  background-image: url(../../images/home/icon.png);
+  background-image: url(../../placeholders/icon.png);
   /* background-size: contain;   /* keep proportions */
   /* background-repeat: no-repeat;
   background-position: center right; */ 
