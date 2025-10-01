@@ -1,0 +1,62 @@
+{
+  "about": ["I'm Gabriel Lyane Arevalo, a Data Analyst passionate about making data work smarter, not harder. I focus on building scalable, automated systems that streamline internal workflows, helping teams make better decisions faster. My work blends data engineering, automation, and business intelligence.",
+            "Over the past year, I've designed end-to-end data pipelines using Python, Flask & SQLAlchemy, and Microsoft Fabric (Power BI and DataFlows). I've also built custom automation tools for document scanning, data collection, and internal calculators that support business needs.",
+            "Throughout the development of these projects, I keep things clear, efficient, and practical. I aim to create tools that don't just deliver accurate results but also fit seamlessly into everyday workflows. My goal is to turn manual, repetitive tasks into automated, reliable solutions that save time and deliver high-quality data for strategy, sales, and leadership."],
+
+  "experience": [
+    {
+      "company": "RBox International Solutions",
+      "roles": [
+        {
+          "title": "Data Analyst",
+          "dates": "Mar 2025 - PRESENT",
+          "description": "Automated data collection and ETL development using Python and developed a Flask web app. Performed data and statistical analytics with Power BI visualization to support business intelligence and decision-making.",
+          "stack": ["Python", "Excel", "Flask & SQLAlchemy", "JavaScript", "Data Modeling", "Fabric: Power BI & DataFlows"]
+        }
+      ]
+    },
+    {
+      "company": "Erovoutika",
+      "roles": [
+        {
+          "title": "Electronics Engineer Intern",
+          "dates": "Jul 2023 - Aug 2023",
+          "description": "Analyzed device performance using statistics, developed electronic and robotic systems with C++, Arduino, and ESP32, and demonstrated strengths in teamwork, communication, and leadership.",
+          "stack": ["C++", "Statistics", "Electronics", "Arduino Robotics"]
+        }
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "LAPD Crime Data Analysis",
+      "cover_image": "others/images/projects/1.jpg",
+      "description": "Built a complete end-to-end data pipeline and analytical workflow for processing, cleaning, normalizing, and visualizing LAPD crime data using SQL Server, Power BI, and a modern data warehouse approach.",
+      "stack": ["SQL Server", "Power BI", "Data Warehousing"],
+      "link": "https://github.com/glparevalo/lapd-crime-data-analysis"
+    },
+    {
+      "title": "Netflix Relational Database",
+      "cover_image": "others/images/projects/1.jpg",
+      "description": "Cleaned, transformed, and modeled a Netflix dataset into a star schema using MySQL and Excel, and built interactive dashboard in Power BI.",
+      "stack": ["MySQL", "Excel", "Power BI"],
+      "link": "https://github.com/glparevalo/netflix-relational-database"
+    },
+    {
+      "title": "COVID-19 Insights: Muntinlupa City 2020",
+      "cover_image": "others/images/projects/1.jpg",
+      "description": "Extracted, cleaned, and analyzed over 1M rows of COVID-19 data using MySQL and Excel. After cleaning, a Tableau dashboard is developed to present key metrics and indentift trends and patterns.",
+      "stack": ["MySQL", "Excel", "Tableau"],
+      "link": ""
+    }
+  ],
+
+  "education": [
+    {
+        "univ": "University of the City of Manila (PLM)",
+        "program": "BS Electronics Engineering",
+        "details": "Graduated Cum Laude"
+    }
+  ]
+}
