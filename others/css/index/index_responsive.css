@@ -1,0 +1,232 @@
+/* Tablets & small laptops (max width ~1200px) */
+@media (max-width: 1200px) {
+
+    .profile {
+        width: 28%;
+        padding: 3rem;
+    }
+
+    .info {
+        margin-left: 28%;
+        width: 72%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .profile-name h1 {
+        font-size: 1.7rem;
+    }
+
+    .profile-name h2 {
+        font-size: 1.3rem;
+    }
+
+    .profile-name h3{
+        width: auto;
+    }
+
+    .project-image img {
+        width: 11rem;
+        height: 7rem;
+    }
+
+    .project-image, .role-date{
+        width: 30%;
+    }
+
+    .project-details, .role-details {
+        width: 70%;
+    }
+}
+
+/* Tablets / Landscape (max width ~992px) */
+@media (max-width: 992px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .section {
+        scroll-margin-top: 14rem;
+    }
+
+    .profile {
+        position: sticky;
+        width: 100%;
+        padding: 2rem;
+        height: auto;
+    }
+
+    .profile-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .profile-nav {
+        gap: 2rem;
+    }
+
+    .profile-nav .line, 
+    .profile-nav a:hover .line, 
+    .profile-nav a.active .line {
+        height: 0;
+        width: 0;
+    }
+
+    .profile-nav a:hover{
+        color: blueviolet;
+    }
+
+
+    .profile-contact {
+        margin-top: 2rem;
+        gap: 2rem;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .profile-image{
+        padding: 0;
+    }
+
+    .profile-image img{
+        width: 10rem;
+    }
+
+    .profile-name{
+        text-align: start;
+        width: 40%;
+    }
+
+    .info {
+        margin-left: 0;
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .company-container,
+    .project-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .role-date,
+    .role-details,
+    .project-image,
+    .project-details {
+        width: 100%;
+    }
+
+    .project-image {
+        margin-bottom: 1rem;
+    }
+
+    .project-image img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+}
+
+/* Mobile (max width ~768px) */
+@media (max-width: 768px) {
+    .profile{
+        position: relative;
+        display: flex;
+    }
+
+    .profile-container{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .profile-name{
+        margin-right: 1rem;
+        width: 55%;
+    }
+
+    .profile-contact{
+        flex-direction: row;
+        margin-left: 1rem;
+    }
+
+    .profile-name h1 {
+        font-size: 2rem;
+    }
+
+    .profile-name h2 {
+        font-size: 1.2rem;
+    }
+
+    .profile-name h3 {
+        font-size: 0.9rem;
+    }
+
+    .profile-image img {
+        display: none;
+    }
+
+    .info {
+        padding: 2rem;
+    }
+
+    .section h2 {
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .role-details p,
+    .project-details p,
+    .education-details p {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+
+    .profile-nav{
+        display: none;
+    }
+}
+
+/* Small Mobile (max width ~480px) */
+@media (max-width: 480px) {
+    .profile {
+        padding: 1.5rem;
+    }
+
+    .profile-name h1 {
+        font-size: 1.8rem;
+    }
+
+    .profile-name h2 {
+        font-size: 1rem;
+    }
+
+    .profile-name h3 {
+        font-size: 0.8rem;
+    }
+
+    .profile-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .profile-contact {
+        gap: 1.5rem;
+    }
+
+    .info {
+        padding: 1rem;
+    }
+
+    .project-image img {
+        max-width: 100%;
+        border-radius: 4px;
+    }
+
+    .role-details li,
+    .project-details li {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.5rem;
+    }
+}

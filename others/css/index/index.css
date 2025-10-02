@@ -1,0 +1,391 @@
+:root{
+    --paragraph-color: rgb(193, 199, 219);
+    --paragraph-weight: 300;
+    --extra-details-font-color: rgb(199, 202, 210);
+    --container-background: rgba(255, 255, 255, 0.048);
+    --container-border-shade: rgb(121, 79, 194);
+    --stack-box-color: rgb(69, 21, 191);
+    --stack-font-color:  rgb(233, 229, 241);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(20, 26, 41);
+  position: relative;
+  margin: 0;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  position: relative;
+  inset: 0;
+  box-shadow: 0 0 400px rgba(0, 0, 0, 0.8) inset;
+  pointer-events: none;
+  z-index: -1;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    font-family: Inter;
+    color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Left Panel */
+.profile {
+    width: 40%;
+    height: 100vh;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    overflow-y: auto; 
+    padding: 5rem;
+    background-color: #f4f4f4;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* pushes top + bottom apart */
+    height: 100%;
+}
+
+/* Image, Name, and Motto */
+.profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-bottom: 1.5rem;
+}
+
+.profile-image img{
+    width: 12rem;
+    border-radius: 100%;
+}
+
+.profile-name h1{
+    font-size: clamp(2.1rem, 2.8vw, 3.4rem);
+    font-weight: 700;
+    padding-bottom: 0.1rem;
+    color: #000;
+}
+
+.profile-name h2{
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    color: #000;
+}
+
+.profile-name h3{
+    font-size: 1rem;
+    font-weight: 300;
+    width: 17rem;
+    font-style: italic;
+    color: black;
+    
+}
+
+/* Navigation Bar */
+.profile-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 30%;
+    justify-content: center;
+}
+
+.profile-nav a{
+    color: #302096;
+    font-size: 0.85rem;
+}
+
+.profile-nav a {
+    display: flex;
+    align-items: center;
+}
+
+.profile-nav .line {
+    height: 0.1rem;
+    width: 3rem;
+    background-color: #302096;
+    margin-right: 0.3rem;
+    transition: width 0.3s ease;
+}
+
+.profile-nav a:hover .line {
+    width: 6em;
+    height: 0.15rem;
+}
+
+.profile-nav a.active .line {
+    width: 6em;
+    height: 0.15rem;
+}
+
+/* Contact Icons */
+.profile-contact {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 3rem;
+}
+
+.profile-contact i{
+    font-size: 2rem;
+    color: #000;
+}
+
+.profile-contact i:hover{
+    font-size: 2rem;
+    color: var(--stack-box-color);
+    transition: 0.2s ease;
+}
+
+/* Right Panel */
+.info {
+    margin-left: 40%;
+    width: 60%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    overflow-y: auto;
+}
+
+.section h2{
+    padding-top: 5rem;
+    padding-bottom: 1.3rem;
+}
+
+/* About */
+.about p {
+    margin-bottom: 1.3rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    line-height: 1.7rem;
+    font-weight: var(--paragraph-weight);
+    color: var(--paragraph-color);
+}
+
+/* Experience */
+.company-container{
+    display: flex;
+    width: 100%;
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    gap: 1.2rem;
+}
+
+.company-container:hover{
+    transition: 0.3s ease;
+    border-top: 1px solid var(--container-border-shade);
+    background-color: var(--container-background);
+}
+
+.role-date {
+    width: 30%;
+}
+
+.role-date p{
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--extra-details-font-color);
+}
+
+.role-details {
+    width: 70%;
+}
+
+.role-details h3, .role-details h4, .role-details p {
+    margin-bottom: 0.5rem;
+}
+
+.role-details h3{
+    font-size: 1.1rem;
+    align-items: end;
+}
+
+.role-details h4{
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.role-details p {
+    margin-bottom: 1rem;
+    color: var(--paragraph-color);
+    font-weight: var(--paragraph-weight);
+    font-size: 1rem;
+}
+
+.role-details ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+    list-style: none;
+    gap: 1rem;
+}
+
+.role-details li {
+    padding: 0.2rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    background-color: var(--stack-box-color);
+    border-radius: 6px;
+    color: var(--stack-font-color);
+}
+
+.view-resume, .view-projects {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    width: 10rem;
+}
+
+
+.view-projects a, .view-resume a{
+    color: #f4f4f4;
+    background-color: blueviolet;
+    padding: 0.7rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    border-radius: 6px;
+}
+
+.view-resume a:hover{
+    background-color: rgb(83, 26, 136);
+    transition: 0.3s ease;
+}
+
+/* Projects */
+.projects a {
+    text-decoration: none;
+}
+
+.project-container {
+    display: flex;
+    margin-bottom: 2rem;
+    padding: 1.2rem;
+    width: 100%;
+    gap: 1.2rem;
+    border: 1px solid transparent;
+    border-radius: 6px;
+}
+
+.project-container:hover {
+    border-top: 1px solid var(--container-border-shade);
+    background-color: var(--container-background);
+    transition: 0.3s ease;
+}
+
+.project-image{
+    width: 30%;
+    justify-content: center;
+    display: flex;
+}
+
+.project-image img{
+    width: 11rem;
+    height: 7.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.project-details{
+    width: 70%;
+}
+
+.project-details h3, .project-details h4, .project-details p {
+    margin-bottom: 0.5rem;
+}
+
+.project-details h3{
+    font-size: 1.1rem;
+    align-items: end;
+}
+
+.project-details p {
+    margin-bottom: 1rem;
+    color: var(--paragraph-color);
+    font-weight: var(--paragraph-weight);
+    font-size: 1rem;
+}
+
+.project-details ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+    list-style: none;
+    gap: 1rem;
+}
+
+.project-details li {
+    padding: 0.2rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    background-color: var(--stack-box-color);
+    color: var(--stack-font-color);
+    border-radius: 6px;
+}
+
+.view-projects a:hover{
+    background-color: rgb(83, 26, 136);
+    transition: 0.3s ease;
+}
+
+/* Education */
+.education { 
+    padding-bottom: 6rem;
+}
+
+.education-details{
+    padding: 1.2rem;
+}
+
+.education-details h3, .education-details h4, .education-details p {
+    margin-bottom: 0.5rem;
+}
+
+.education-details h4{
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.education-details p {
+    margin-bottom: 1rem;
+    color: var(--paragraph-color);
+    font-weight: var(--paragraph-weight);
+    font-size: 1rem;
+}

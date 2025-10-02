@@ -31,21 +31,21 @@
   "projects": [
     {
       "title": "LAPD Crime Data Analysis",
-      "cover_image": "others/images/projects/1.jpg",
+      "cover_image": "others/images/projects/home_cover_pics/lapd.png",
       "description": "Built a complete end-to-end data pipeline and analytical workflow for processing, cleaning, normalizing, and visualizing LAPD crime data using SQL Server, Power BI, and a modern data warehouse approach.",
       "stack": ["SQL Server", "Power BI", "Data Warehousing"],
       "link": "https://github.com/glparevalo/lapd-crime-data-analysis"
     },
     {
       "title": "Netflix Relational Database",
-      "cover_image": "others/images/projects/1.jpg",
+      "cover_image": "others/images/projects/home_cover_pics/netflix.png",
       "description": "Cleaned, transformed, and modeled a Netflix dataset into a star schema using MySQL and Excel, and built interactive dashboard in Power BI.",
       "stack": ["MySQL", "Excel", "Power BI"],
       "link": "https://github.com/glparevalo/netflix-relational-database"
     },
     {
       "title": "COVID-19 Insights: Muntinlupa City 2020",
-      "cover_image": "others/images/projects/1.jpg",
+      "cover_image": "others/images/projects/home_cover_pics/covid.png",
       "description": "Extracted, cleaned, and analyzed over 1M rows of COVID-19 data using MySQL and Excel. After cleaning, a Tableau dashboard is developed to present key metrics and indentift trends and patterns.",
       "stack": ["MySQL", "Excel", "Tableau"],
       "link": ""

@@ -26,7 +26,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="others/css/index.css" />
+    <link rel="stylesheet" href="others/css/index/index.css" />
+    <link rel="stylesheet" href="others/css/index/index_responsive.css" />
 
 </head>
 
@@ -34,68 +35,69 @@
 
     <div class="container">
 
+        <!-- Left Panel -->
         <div class="profile">
             <div class="profile-container">
-            <div class="profile-image">
-                <img src="others/images/image.png" />
-            </div>
+                <div class="profile-image">
+                    <img src="others/images/home/image.png" />
+                </div>
 
-            <div class="profile-name">
-                <h1>Gabriel Arevalo</h1>
-                <h2>Data Analyst</h2>
-                <h3>Where simplicity flows, efficiency and perfection follow.</h3>
-            </div>
+                <div class="profile-name">
+                    <h1>Gabriel Arevalo</h1>
+                    <h2>Data Analyst</h2>
+                    <h3>Where simplicity flows, efficiency and perfection follow.</h3>
+                </div>
 
-            <div class="profile-nav">
-                <a href="#about"><span class="line"></span>About Me</a>
-                <a href="#experience"><span class="line"></span>Experience</a>
-                <a href="#projects"><span class="line"></span>Projects</a>
-            </div>
+                <div class="profile-nav">
+                    <a href="#"><span class="line"></span>ABOUT ME</a>
+                    <a href="#experience"><span class="line"></span>EXPERIENCE</a>
+                    <a href="#projects"><span class="line"></span>PROJECTS</a>
+                </div>
 
+                <div class="profile-contact">
+                    <a href="mailto:gabriellyanearevalo@gmail.com" target="_blank" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
 
-            <div class="profile-contact">
-                <a href="mailto:gabriellyanearevalo@gmail.com" target="_blank" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
+                    <a href="https://www.linkedin.com/in/glparevalo/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
 
-                <a href="https://www.linkedin.com/in/glparevalo/" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-
-                <a href="https://github.com/glparevalo" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
+                    <a href="https://github.com/glparevalo" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
             </div>
         </div>
     
+        <!-- Right Panel -->
         <div class="info">
             <!-- About -->
             <section class="section about" id="about"> 
-                <h2>About Me</h2>
+                <h2>ABOUT ME</h2>
             </section>
 
             <!-- Experience -->
             <section class="section experience" id="experience">
-                <h2>Experience</h2>
-                
+                <h2>EXPERIENCE</h2>
             </section>
 
             <!-- Projects -->
             <section class="section projects" id="projects">
-                <h2>Projects</h2>
+                <h2>PROJECTS</h2>
             </section>
 
             <section class="section education" id="education">
-                <h2>Education</h2>
+                <h2>EDUCATION</h2>
             </section>
 
         </div>
     </div>
-       
-    <!-- JSON Loader Script -->
+    
+    <!-- JavaScript -->
     <script>
-      fetch("others/json/data.json")
+        // JSON Loader Script
+        fetch("others/json/data.json")
         .then(response => response.json())
         .then(data => {
 
@@ -176,46 +178,59 @@
                     `;
             document.querySelector(".projects").innerHTML += projHTML;
 
-          // Education
-          let educHTML = "";
-          data.education.forEach(education => {
-            educHTML += `
-                <div class="education-details details">
-                    <h3>${education.univ}</h3>
-                    <h4>${education.program}</h4>
-                    <p>${education.details}</p>
-                </div>
-            `;
-          });
-          document.querySelector(".education").innerHTML += educHTML;
+            // Education
+            let educHTML = "";
+            data.education.forEach(education => {
+                educHTML += `
+                    <div class="education-details details">
+                        <h3>${education.univ}</h3>
+                        <h4>${education.program}</h4>
+                        <p>${education.details}</p>
+                    </div>
+                `;
+            });
+            document.querySelector(".education").innerHTML += educHTML;
 
         })
         .catch(error => console.error("Error loading JSON:", error));
 
-  // Grab all section elements and nav links
-  const sections = document.querySelectorAll(".info .section");
-  const navLinks = document.querySelectorAll(".profile-nav a");
+        // Script for nav bar line visual
+        const sections = document.querySelectorAll(".info .section");
+        const navLinks = document.querySelectorAll(".profile-nav a");
 
-  window.addEventListener("scroll", () => {
-    let current = "";
+        window.addEventListener("scroll", () => {
+            let current = "";
 
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
+            sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
 
-      if (scrollY >= sectionTop - sectionHeight / 3) {
-        current = section.getAttribute("id");
-      }
-    });
+            if (scrollY >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute("id");
+            }
+            });
 
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === "#" + current) {
-        link.classList.add("active");
-      }
-    });
-  });
+            navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === "#" + current) {
+                link.classList.add("active");
+            }
+            });
+        });
 
+        // Fade/slide in sections on scroll
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // animate only once
+            }
+        });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll(".section").forEach(section => {
+        observer.observe(section);
+        });
 
     </script>
 
