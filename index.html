@@ -28,6 +28,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="others/css/index/index.css" />
     <link rel="stylesheet" href="others/css/index/index_responsive.css" />
+    <link rel="icon" type="image/svg+xml" href="others/images/favicon.svg" />
 
 </head>
 
@@ -216,20 +217,6 @@
                 link.classList.add("active");
             }
             });
-        });
-
-        // Fade/slide in sections on scroll
-        const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target); // animate only once
-            }
-        });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll(".section").forEach(section => {
-        observer.observe(section);
         });
 
     </script>

@@ -51,17 +51,6 @@ a {
     min-height: 100vh;
 }
 
-.section {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* Left Panel */
 .profile {
     width: 40%;
@@ -272,7 +261,6 @@ a {
     margin-bottom: 1rem;
     width: 10rem;
 }
-
 
 .view-projects a, .view-resume a{
     color: #f4f4f4;
