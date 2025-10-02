@@ -19,19 +19,19 @@ html {
 }
 
 body {
-  background-color: rgb(20, 26, 41);
-  position: relative;
-  margin: 0;
-  z-index: 0;
+    background-color: rgb(20, 26, 41);
+    position: relative;
+    margin: 0;
+    z-index: 0;
 }
 
 body::before {
-  content: "";
-  position: relative;
-  inset: 0;
-  box-shadow: 0 0 400px rgba(0, 0, 0, 0.8) inset;
-  pointer-events: none;
-  z-index: -1;
+    content: "";
+    position: relative;
+    inset: 0;
+    box-shadow: 0 0 400px rgba(0, 0, 0, 0.8) inset;
+    pointer-events: none;
+    z-index: -1;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, li, a {
@@ -52,16 +52,15 @@ a {
 }
 
 .section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .section.visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
-
 
 /* Left Panel */
 .profile {
@@ -91,7 +90,7 @@ a {
 }
 
 .profile-image img{
-    width: 12rem;
+    width: 10rem;
     border-radius: 100%;
 }
 

@@ -53,8 +53,11 @@
     .profile {
         position: sticky;
         width: 100%;
-        padding: 2rem;
+        padding: 1rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
         height: auto;
+        z-index: 2;
     }
 
     .profile-container {
@@ -77,10 +80,9 @@
         color: blueviolet;
     }
 
-
     .profile-contact {
         margin-top: 2rem;
-        gap: 2rem;
+        gap: 1.1rem;
         flex-direction: column;
         margin: 0;
     }
@@ -90,7 +92,7 @@
     }
 
     .profile-image img{
-        width: 10rem;
+        width: 8rem;
     }
 
     .profile-name{
