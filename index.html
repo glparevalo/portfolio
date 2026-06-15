@@ -2,224 +2,255 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gabriel Arevalo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gabriel Arevalo</title>
 
-    <!-- Icons -->
-    <link 
-        rel="stylesheet" 
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_outward" 
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 
-    <link 
-        rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
-        integrity="sha512-..." 
-        crossorigin="anonymous" 
-        referrerpolicy="no-referrer" 
-    />
-
-    <!-- Font: Inter and Google Sans Code -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="others/css/index/index.css" />
-    <link rel="stylesheet" href="others/css/index/index_responsive.css" />
-    <link rel="icon" type="image/svg+xml" href="others/images/favicon.svg" />
-
+  <link rel="stylesheet" href="others/css/index.css">
 </head>
 
 <body>
 
-    <div class="container">
+<div class="shell">
 
-        <!-- Left Panel -->
-        <div class="profile">
-            <div class="profile-container">
-                <div class="profile-image">
-                    <img src="others/images/home/image.png" />
-                </div>
+  <aside class="sidebar">
 
-                <div class="profile-name">
-                    <h1>Gabriel Arevalo</h1>
-                    <h2>Data Analyst</h2>
-                    <h3>Where simplicity flows, efficiency and perfection follow.</h3>
-                </div>
-
-                <div class="profile-nav">
-                    <a href="#"><span class="line"></span>ABOUT ME</a>
-                    <a href="#experience"><span class="line"></span>EXPERIENCE</a>
-                    <a href="#projects"><span class="line"></span>PROJECTS</a>
-                </div>
-
-                <div class="profile-contact">
-                    <a href="mailto:gabriellyanearevalo@gmail.com" target="_blank" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/glparevalo/" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-
-                    <a href="https://github.com/glparevalo" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Right Panel -->
-        <div class="info">
-            <!-- About -->
-            <section class="section about" id="about"> 
-                <h2>ABOUT ME</h2>
-            </section>
-
-            <!-- Experience -->
-            <section class="section experience" id="experience">
-                <h2>EXPERIENCE</h2>
-            </section>
-
-            <!-- Projects -->
-            <section class="section projects" id="projects">
-                <h2>PROJECTS</h2>
-            </section>
-
-            <section class="section education" id="education">
-                <h2>EDUCATION</h2>
-            </section>
-
-        </div>
+    <div class="name-block">
+      <h1>Gabriel Arevalo</h1>
+      <div class="role">Analytics Engineer</div>
+      <p class="tagline">Where simplicity flows,<br>efficiency and perfection follow.</p>
     </div>
-    
-    <!-- JavaScript -->
-    <script>
-        // JSON Loader Script
-        fetch("others/json/data.json")
-        .then(response => response.json())
-        .then(data => {
 
-            // About
-            let abtHTML = "";
-            data.about.forEach(paragraph => {
-                abtHTML += `<p>${paragraph}</p>`;
-            })
-            document.querySelector(".about").innerHTML += abtHTML;
+    <div class="resume-pill">
+      <span class="blink"></span>
+      <a href="">View my full resume</a>
+    </div>
 
-            // Experience
-            let expHTML = "";
-            data.experience.forEach(company => {
-                expHTML += `<div class="company-container">`;
+    <div class="divider"></div>
 
-                company.roles.forEach(role => {
+    <nav class="sidebar-nav" aria-label="Page sections">
+      <a href="#about"><span class="dot"></span>About Me</a>
+      <a href="#experience"><span class="dot"></span>Experience</a>
+      <a href="#projects"><span class="dot"></span>Projects</a>
+      <a href="#education"><span class="dot"></span>Education</a>
+    </nav>
 
-                    let expStackHTML = "<ul>";
-                    role.stack.forEach(stack => {
-                        expStackHTML += `<li>${stack}</li>`;
-                    });
-                    expStackHTML += "</ul>";
+    <div class="divider"></div>
 
-                    expHTML += `
-                        <div class="role-date">
-                            <p>${role.dates}</p>
-                        </div>
+    <div class="contact-row">
+      <a href="mailto:gabriellyanearevalo@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/glparevalo/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/glparevalo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
 
-                        <div class="role-details details">
-                            <h3>${company.company}</h3>
-                            <h4>${role.title}</h4>
-                            <p>${role.description}</p>
-                            ${expStackHTML}
-                        </div>
-                    `;
-                });
+  </aside>
 
-                expHTML += `</div>`;
-            });
+  <main class="main-content">
 
-            expHTML += `<div class="view-resume">
-                            <a href="">View Resume</a>
-                        </div>
-                    `;
-            document.querySelector(".experience").innerHTML += expHTML;
+    <section class="section about" id="about">
+      <div class="section-label">About Me</div>
+      <div class="about-text" id="about-text"></div>
+      <div class="skills-heading">Tech Stack & Tools</div>
+      <div class="skills-grid" id="skills-grid"></div>
+    </section>
 
-            // Projects
-            let projHTML = "";
-            data.projects.forEach(proj => {
-                let stackHTML = "<ul>";
-                proj.stack.forEach(tech => {
-                    stackHTML += `<li>${tech}</li>`;
-                });
-                stackHTML += "</ul>";
+    <section class="section experience" id="experience">
+      <div class="section-label">Experience</div>
+      <div id="exp-list"></div>
+    </section>
 
-                projHTML += `
-                    <a href="${proj.link}" target="_blank">
-                        <div class="project-container">
-                            <div class="project-image">
-                                <img src="${proj.cover_image}"></img>
-                            </div>
-                            
-                            <div class="project-details details">
-                                
-                                    <h3>${proj.title}</h3>
-                                
-                                <p>${proj.description}</p>
-                                ${stackHTML}
-                            </div>
-                        </div>
-                    </a>
-                `;
-            });
+    <section class="section projects" id="projects">
+      <div class="section-label">Projects</div>
+      <div id="proj-list"></div>
+      <a class="cta-link" href="https://github.com/glparevalo" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i> See all on GitHub <i class="fas fa-arrow-right"></i>
+      </a>
+    </section>
 
-            projHTML += `<div class="view-projects">
-                            <a href="">View All Projects</a>
-                        </div>
-                    `;
-            document.querySelector(".projects").innerHTML += projHTML;
+    <section class="section education" id="education">
+      <div class="section-label">Education</div>
+      <div id="edu-list"></div>
+    </section>
 
-            // Education
-            let educHTML = "";
-            data.education.forEach(education => {
-                educHTML += `
-                    <div class="education-details details">
-                        <h3>${education.univ}</h3>
-                        <h4>${education.program}</h4>
-                        <p>${education.details}</p>
-                    </div>
-                `;
-            });
-            document.querySelector(".education").innerHTML += educHTML;
+    <p class="footer-note reveal">
+      Gabriel Arevalo &nbsp;·&nbsp; <span id="year"></span>
+    </p>
 
-        })
-        .catch(error => console.error("Error loading JSON:", error));
+  </main>
 
-        // Script for nav bar line visual
-        const sections = document.querySelectorAll(".info .section");
-        const navLinks = document.querySelectorAll(".profile-nav a");
+</div>
 
-        window.addEventListener("scroll", () => {
-            let current = "";
+<script>
+  /* ── DATA RENDERING ──────────────────────────────────────────── */
+  function render(data) {
 
-            sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
+    /* About */
+    const aboutEl = document.getElementById('about-text');
+    data.about.forEach(paragraph => {
+      const p = document.createElement('p');
+      p.innerHTML = paragraph;
+      aboutEl.appendChild(p);
+    });
 
-            if (scrollY >= sectionTop - sectionHeight / 3) {
-                current = section.getAttribute("id");
-            }
-            });
+    /* Skills */
+    const skillsEl = document.getElementById('skills-grid');
+    data.skills.forEach(skill => {
+      const div = document.createElement('div');
+      div.className = 'skill-item';
+      div.innerHTML = `<i class="${skill.icon}"></i>${skill.label}`;
+      skillsEl.appendChild(div);
+    });
 
-            navLinks.forEach(link => {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === "#" + current) {
-                link.classList.add("active");
-            }
-            });
+    /* Experience */
+    const expEl = document.getElementById('exp-list');
+    data.experience.forEach(company => {
+      const rolesHTML = company.roles.map(role => {
+        const tags = role.stack.map(t => `<span class="tag">${t}</span>`).join('');
+        return `
+          <div class="role-row">
+            <div class="exp-date">${role.dates}</div>
+            <div class="role-content">
+              <div class="job-title">${role.title}</div>
+              <p>${role.description}</p>
+              <div class="tags">${tags}</div>
+            </div>
+          </div>`;
+      }).join('');
+      
+      const card = document.createElement('div');
+card.className = 'exp-card reveal multi-role';
+card.innerHTML = `
+  <div></div>
+  <div class="exp-body">
+    <h3>${company.company}</h3>
+    ${rolesHTML}
+  </div>`;
+
+if (company.link) {
+  const anchor = document.createElement('a');
+  anchor.href = company.link;
+  anchor.target = '_blank';
+  anchor.rel = 'noopener noreferrer';
+  anchor.appendChild(card);
+  expEl.appendChild(anchor);
+} else {
+  expEl.appendChild(card);
+}
+    });
+
+    /* Projects */
+    const projEl = document.getElementById('proj-list');
+    data.projects.forEach(project => {
+      const tags = project.stack.map(t => `<li>${t}</li>`).join('');
+      const thumb = project.cover_image
+        ? `<img src="${project.cover_image}" alt="${project.title}" loading="lazy">`
+        : `<div class="proj-thumb-placeholder"><i class="fas fa-chart-pie"></i></div>`;
+      const arrow = project.link
+        ? `<i class="fas fa-arrow-up-right-from-square"></i>`
+        : '';
+
+      const card = document.createElement('div');
+      card.className = 'proj-card reveal';
+      card.innerHTML = `
+        <div class="proj-thumb">${thumb}</div>
+        <div class="proj-info">
+          <h3>${project.title} ${arrow}</h3>
+          <p>${project.description}</p>
+          <ul class="tags">${tags}</ul>
+        </div>`;
+
+      const img = card.querySelector('.proj-thumb img');
+      if (img) {
+        img.addEventListener('error', () => {
+          img.closest('.proj-thumb').innerHTML =
+            `<div class="proj-thumb-placeholder"><i class="fas fa-chart-pie"></i><span>No preview</span></div>`;
         });
+      }
 
-    </script>
+      if (project.link) {
+        const anchor = document.createElement('a');
+        anchor.href = project.link;
+        anchor.target = '_blank';
+        anchor.rel = 'noopener noreferrer';
+        anchor.appendChild(card);
+        projEl.appendChild(anchor);
+      } else {
+        projEl.appendChild(card);
+      }
+    });
+
+    /* Education */
+    const eduEl = document.getElementById('edu-list');
+    data.education.forEach(entry => {
+      const div = document.createElement('div');
+      div.className = 'edu-card reveal';
+      div.innerHTML = `
+        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="edu-body">
+          <h3>${entry.univ}</h3>
+          <div class="program">${entry.program}</div>
+          <div class="honor"><i class="fas fa-star"></i>${entry.details}</div>
+        </div>`;
+      eduEl.appendChild(div);
+    });
+
+    /* Footer year */
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+  }
+
+  /* ── DATA LOADING ────────────────────────────────────────────── */
+  fetch('others/data/data.json')
+    .then(res => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    })
+    .then(data => render(data))
+    .catch(err => {
+      console.error('Failed to load data.json:', err);
+      document.querySelector('.main-content').insertAdjacentHTML(
+        'afterbegin',
+        `<p style="color:#f66;padding:2rem;font-family:monospace;font-size:0.85rem">
+          ⚠ Could not load <code>others/data/data.json</code>.<br>
+          Make sure the file exists and you are running through a server, not file://.
+        </p>`
+      );
+    });
+
+  /* ── NAV HIGHLIGHTING ────────────────────────────────────────── */
+  const sections = Array.from(document.querySelectorAll('.section'));
+  const navLinks  = Array.from(document.querySelectorAll('.sidebar-nav a'));
+
+  function getActiveSection() {
+    const trigger = window.innerHeight * 0.6;
+    let active = sections[0];
+    sections.forEach(sec => {
+      if (sec.getBoundingClientRect().top <= trigger) active = sec;
+    });
+    return active ? active.id : '';
+  }
+
+  function updateNav() {
+    const id = getActiveSection();
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+  }
+
+  updateNav();
+  window.addEventListener('scroll', updateNav, { passive: true });
+</script>
 
 </body>
 </html>

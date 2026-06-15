@@ -1,0 +1,80 @@
+{
+  "about": [
+    "I'm <strong>Gabriel</strong>, an Analytics Engineer passionate about making data work smarter, not harder. I focus on building scalable, automated solutions that streamline workflows, improve data accessibility, and help teams make faster, more informed decisions.",
+    "My work combines data engineering, automation, and business intelligence. I have designed end-to-end data pipelines using Python, Flask, SQLAlchemy, and Microsoft Fabric (Power BI and Dataflows), as well as developed custom automation tools for document scanning, data collection, and business calculators that support operational and strategic needs.",
+    "Beyond engineering solutions, I have led and owned multiple end-to-end analytics projects that answered critical business questions and delivered actionable insights to executive leadership. By transforming complex data into clear recommendations, I help bridge the gap between technical implementation and business strategy.",
+    "I keep things <strong>clear, efficient, and practical</strong>. My goal is to build systems that not only produce accurate results but also integrate seamlessly into everyday workflows, turning manual, repetitive processes into reliable solutions that save time, improve data quality, and empower strategy, sales, and leadership teams."
+  ],
+
+  "skills": [
+    { "label": "Python",        "icon": "fab fa-python" },
+    { "label": "Power BI",      "icon": "fas fa-chart-area" },
+    { "label": "SQL",           "icon": "fas fa-database" },
+    { "label": "Excel",         "icon": "fas fa-file-excel" },
+    { "label": "Automation",    "icon": "fas fa-chart-bar" },
+    { "label": "Data Modeling", "icon": "fas fa-project-diagram" },
+    { "label": "ETL Pipelines", "icon": "fas fa-stream" },
+    { "label": "Databasing",    "icon": "fas fa-layer-group" },
+    { "label": "DAX",           "icon": "fas fa-cubes" },
+    { "label": "Statistics",    "icon": "fas fa-wave-square" }
+  ],
+
+  "experience": [
+    {
+      "company": "RBox International Solutions",
+      "link": "https://www.linkedin.com/company/rbox-careers-international-solutions-inc/",
+      "roles": [
+        {
+          "title": "Data Analyst",
+          "dates": "Mar 2025 - Present",
+          "description": "Automated data collection and ETL development using Python and DAX. Performed data and statistical analytics with Power BI visualization to support business intelligence and decision-making.",
+          "stack": ["Python", "Excel", "Data Automation", "DAX", "Data Modeling", "MS Fabric"]
+        }
+      ]
+    },
+    {
+      "company": "Erovoutika",
+      "link": "https://www.linkedin.com/company/erovoutika/",
+      "roles": [
+        {
+          "title": "Electronics Engineer Intern",
+          "dates": "Jul 2023 - Aug 2023",
+          "description": "Analyzed device performance using descriptive statistics, developed electronic and robotic systems with C++, Arduino, and ESP32, and demonstrated strengths in teamwork, communication, and leadership.",
+          "stack": ["C++", "Statistics", "Electronics", "Arduino Robotics"]
+        }
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "LAPD Crime Data Analysis",
+      "cover_image": "others/images/projects/home_cover_pics/lapd.png",
+      "description": "Built a complete end-to-end data pipeline and analytical workflow for processing, cleaning, normalizing, and visualizing LAPD crime data using SQL Server, Power BI, and a modern data warehouse approach.",
+      "stack": ["SQL Server", "Power BI", "Data Warehousing"],
+      "link": "https://github.com/glparevalo/lapd-crime-data-analysis"
+    },
+    {
+      "title": "Netflix Relational Database",
+      "cover_image": "others/images/projects/home_cover_pics/netflix.png",
+      "description": "Cleaned, transformed, and modeled a Netflix dataset into a star schema using MySQL and Excel, and built an interactive dashboard in Power BI.",
+      "stack": ["MySQL", "Excel", "Power BI"],
+      "link": "https://github.com/glparevalo/netflix-relational-database"
+    },
+    {
+      "title": "COVID-19 Insights: Muntinlupa City 2020",
+      "cover_image": "others/images/projects/home_cover_pics/covid.png",
+      "description": "Extracted, cleaned, and analyzed over 1M rows of COVID-19 data using MySQL and Excel. A Tableau dashboard was developed to present key metrics and identify trends and patterns.",
+      "stack": ["MySQL", "Excel", "Tableau"],
+      "link": "https://github.com/glparevalo/netflix-relational-database"
+    }
+  ],
+
+  "education": [
+    {
+      "univ": "University of the City of Manila (PLM)",
+      "program": "BS Electronics Engineering",
+      "details": "Graduated Cum Laude"
+    }
+  ]
+}
