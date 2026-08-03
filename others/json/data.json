@@ -8,7 +8,13 @@
       "company": "RBox International Solutions",
       "roles": [
         {
-          "title": "Data Analyst",
+          "title": "Analytics Engineer II",
+          "dates": "Mar 2026 - PRESENT",
+          "description": "Built AI-powered analytics and automation solutions using Python, Microsoft Fabric, and Power Automate to streamline data workflows, improve data quality, and support strategic business decision-making.",
+          "stack": ["Python", "Microsoft Fabric", "Power Automate", "Excel", "Git", "Azure DevOps", "ChatGPT", "Claude"]
+        },
+        {
+          "title": "Data Analyst I",
           "dates": "Mar 2025 - PRESENT",
           "description": "Automated data collection and ETL development using Python and developed a Flask web app. Performed data and statistical analytics with Power BI visualization to support business intelligence and decision-making.",
           "stack": ["Python", "Excel", "Flask & SQLAlchemy", "JavaScript", "Data Modeling", "Fabric: Power BI & DataFlows"]
